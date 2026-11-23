@@ -22,7 +22,7 @@ The framework combines:
 ## Framework Architecture
 
 <p align="center">
-  <img src="figures/Figure_1.png" alt="Overview of the DeepGene-AIID framework" width="90%">
+  <img src="Figure 1.jpg" alt="Overview of the DeepGene-AIID framework" width="90%">
 </p>
 
 *Figure 1. Overall architecture of DeepGene-AIID, illustrating multimodal data integration across 17 AIID entities, dual-channel graph encoding, adversarial feature disentanglement, SimAM-guided fusion, and downstream translational and modular analyses.*
