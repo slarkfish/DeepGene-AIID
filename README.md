@@ -99,20 +99,8 @@ python scripts/predict.py --checkpoint checkpoints/best_model.pt --output result
 
 ---
 
-## Citation
 
-If you use **DeepGene-AIID** in your research, please cite:
-
-```bibtex
-@article{DeepGeneAIID2026,
-  title   = {DeepGene-AIID: A Multimodal Dual-Channel Graph Neural Network for Prioritizing Autoimmune and Autoinflammatory Disease-Associated Genes},
-  author  = {<Author List>},
-  journal = {Briefings in Bioinformatics},
-  year    = {2026},
-  note    = {Submitted}
-}
-```
 
 ## Contact
 
-For questions or issues, please open a GitHub Issue or contact the corresponding author at `<corresponding-author-email>`.
+For questions or issues, please open a GitHub Issue or contact the corresponding author at `<liyuanyuan@sibpt.cn>`.
