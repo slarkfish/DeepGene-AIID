@@ -22,7 +22,7 @@ The framework combines:
 ## Framework Architecture
 
 <p align="center">
-  <img src="Figure 1.jpg" alt="Overview of the DeepGene-AIID framework" width="90%">
+  <img src="figures/Figure_1.png" alt="Overview of the DeepGene-AIID framework" width="90%">
 </p>
 
 *Figure 1. Overall architecture of DeepGene-AIID, illustrating multimodal data integration across 17 AIID entities, dual-channel graph encoding, adversarial feature disentanglement, SimAM-guided fusion, and downstream translational and modular analyses.*
@@ -43,9 +43,76 @@ The framework combines:
 ```text
 DeepGene-AIID/
 ├── data/                   # Preprocessed multimodal features, PPI/directed networks, and labels
-├── figures/                # Manuscript figures 
+├── figures/                # Manuscript figures (Figure_1.png)
 ├── models/                 # Dual-channel encoder, disentanglement, and SimAM modules
 ├── scripts/                # Training, 5-fold CV evaluation, and downstream analysis scripts
+├── supplementary/          # Supplementary Tables 1 & 2
 ├── results/                # Prioritized gene scores and module assignments
 ├── requirements.txt        # Python dependencies
+├── LICENSE                 # MIT License
 └── README.md
+```
+
+---
+
+## Installation
+
+We recommend creating a dedicated Conda environment:
+
+```bash
+git clone https://github.com/<your-username>/DeepGene-AIID.git
+cd DeepGene-AIID
+
+conda create -n deepgene_aiid python=3.9
+conda activate deepgene_aiid
+
+pip install -r requirements.txt
+```
+
+### Core Dependencies
+- `Python >= 3.9`
+- `PyTorch >= 2.0`
+- `PyTorch Geometric`
+- `numpy`, `pandas`, `scikit-learn`, `networkx`
+
+---
+
+## Usage
+
+### 1. 5-Fold Cross-Validation
+```bash
+python scripts/train_cv.py --config configs/default.yaml
+```
+
+### 2. Genome-Wide Prioritization (11,058 Protein-Coding Genes)
+```bash
+python scripts/predict.py --checkpoint checkpoints/best_model.pt --output results/prioritized_genes.csv
+```
+
+---
+
+## Data Availability
+
+- **Training Cohorts**: Multimodal GWAS and transcriptomic metadata for the 17 AIID entities are detailed in `supplementary/Supplementary_Table_1.xlsx`.
+- **Gene Lists & Annotations**: Predicted AAGs (110), known AAGs (660), small-molecule targets (109), novel candidate AAGs (93), core network genes (844), and antibody/biologic targets (64) are provided in `supplementary/Supplementary_Table_2.xlsx`.
+- **External Validation Cohorts**: Publicly available via NCBI GEO under accessions `GSE121239` (SLE) and `GSE84844` (pSS).
+
+---
+
+## Citation
+
+If you use **DeepGene-AIID** in your research, please cite:
+
+```bibtex
+@article{DeepGeneAIID2026,
+  title   = {DeepGene-AIID: A Multimodal Dual-Channel Graph Neural Network for Prioritizing Autoimmune and Autoinflammatory Disease-Associated Genes},
+  author  = {<Author List>},
+  journal = {Briefings in Bioinformatics},
+  year    = {2026},
+  note    = {Submitted}
+}
+```
+
+## Contact
+
+For questions or issues, please open a GitHub Issue or contact the corresponding author at `<corresponding-author-email>`.
