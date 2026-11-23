@@ -43,7 +43,7 @@ The framework combines:
 ```text
 DeepGene-AIID/
 ├── data/                   # Preprocessed multimodal features, PPI/directed networks, and labels
-├── figures/                # Manuscript figures (place Figure_1.png here)
+├── figures/                # Manuscript figures 
 ├── models/                 # Dual-channel encoder, disentanglement, and SimAM modules
 ├── scripts/                # Training, 5-fold CV evaluation, and downstream analysis scripts
 ├── results/                # Prioritized gene scores and module assignments
