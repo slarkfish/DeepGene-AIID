@@ -60,7 +60,7 @@ DeepGene-AIID/
 We recommend creating a dedicated Conda environment:
 
 ```bash
-git clone https://github.com/<your-username>/DeepGene-AIID.git
+git clone https://github.com/slarkfish/DeepGene-AIID.git
 cd DeepGene-AIID
 
 conda create -n deepgene_aiid python=3.9
@@ -103,4 +103,4 @@ python scripts/predict.py --checkpoint checkpoints/best_model.pt --output result
 
 ## Contact
 
-For questions or issues, please open a GitHub Issue or contact the corresponding author at `<liyuanyuan@sibpt.cn>`.
+For questions or issues, please open a GitHub Issue or contact the corresponding author at `liyuanyuan@sibpt.cn`.
